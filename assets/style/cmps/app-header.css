@@ -1,0 +1,17 @@
+
+.app-header{
+    background-color: var(--clr1bg);
+    color: var(--clr1);
+}
+
+.app-header .app-nav{
+    display: flex;
+    gap: 15px;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+}
+
+.app-header a.active{
+    color: var(--gray1);
+    text-decoration: underline;
+
+}

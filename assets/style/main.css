@@ -1,21 +1,22 @@
 /* Setup */
-@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import "setup/typography.css";
+@import "setup/vars.css";
 
-/* Vars */
-:root {
-	--clr1: rgb(96, 107, 91);
-	--clr2: rgb(120, 99, 110);
 
-	--clr1bg: rgb(153, 166, 149);
-	--clr1bg-light: rgb(205, 221, 200);
-	--clr2bg: rgb(233, 206, 221);
-	--clr2bg-light: rgb(253, 236, 246);
+/* Components */
+@import "cmps/not-found.css";
+@import "cmps/app-header.css";
+@import "cmps/book-preview.css";
+@import "cmps/book-list.css";
+@import "cmps/book-filter.css";
 
-	--gray1: rgb(240, 240, 240);
-	--gray2: rgb(155, 155, 155);
-	--gray3: rgb(44, 44, 44);
-}
+
+/* Pages */
+@import "pages/home-page.css";
+@import "pages/about-us.css";
+@import "pages/book-details.css";
+@import "pages/book-index.css";
+
 
 
 /* Base */
@@ -26,7 +27,7 @@
 
 body {
 	margin: 0;
-	color: var(--gray3);
+	/* color: var(--gray3); */
 }
 
 h1,
@@ -65,17 +66,19 @@ object {
 }
 
 
-.about nav a {
+/* .about nav a {
 	margin-right: 10px;
-}
+} */
 
 button {
 	cursor: pointer;
-	background-color: var(--clr2bg);
+	/* background-color: var(--clr2bg); */
 	margin: 0.5em;
 	border: 0;
 	padding: 0.5em 0.8em;
 	border-radius: 4px;
+	font-family: 'Edu VIC WA NT Beginner', cursive;
+
 }
 
 button:hover {
@@ -116,9 +119,9 @@ input:focus {
 
 /* text helpers */
 
-.colored-text {
+/* .colored-text {
 	color: var(--clr1);
-}
+} */
 
 /* list helpers */
 
@@ -178,11 +181,11 @@ input:focus {
 	font-size: 1em;
 }
 
-.app-header {
+/* .app-header {
 	background-color: var(--clr1);
 	color: var(--clr2bg-light);
 
-}
+} */
 
 .header-container {
 	display: flex;
@@ -194,21 +197,16 @@ input:focus {
 	flex-grow: 1;
 }
 
-.app-nav {
-	display: flex;
-	gap: 15px;
-}
 
-
-a.active {
+/* a.active {
 	color: rgb(241, 212, 241);
 	font-weight: 600;
 	text-decoration: underline;
-}
+} */
 
 
 @media (max-width: 720px) {
 	.app-header {
-		color: var(--clr2bg-light);
+		/* color: var(--clr2bg-light); */
 	}
 }

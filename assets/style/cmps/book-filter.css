@@ -1,0 +1,28 @@
+
+.book-filter{
+    background-color: var(--gray2);
+    border-radius: 7px;
+    margin-block: 0.5rem 1em;
+    padding: 0.3rem 1em;
+    text-align: center;
+    gap: 10px;
+
+    
+}
+
+.book-filter form{
+    grid-template-columns: 100px 200px;
+    gap: 15px;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+}
+
+.book-filter label{
+    margin-right: 15px;
+}
+
+.book-filter input{
+    margin-right: 10px;
+    /* padding: 0.5em; */
+    border-radius: 4px;
+    border: 1px solid var(--gray3);
+}
