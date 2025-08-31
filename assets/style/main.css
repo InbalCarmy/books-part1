@@ -30,7 +30,7 @@ body {
 	/* color: var(--gray3); */
 }
 
-h1,
+ h1,
 h2,
 h3,
 h4,
@@ -40,7 +40,7 @@ h6 {
 	font-family: 'Edu VIC WA NT Beginner', cursive;
 }
 
-p {
+/*p {
 	margin: 0 0 1em;
 }
 
@@ -48,7 +48,7 @@ a {
 	text-decoration: none;
 	color: unset;
 	cursor: pointer;
-}
+} */
 
 
 
@@ -72,7 +72,6 @@ object {
 
 button {
 	cursor: pointer;
-	/* background-color: var(--clr2bg); */
 	margin: 0.5em;
 	border: 0;
 	padding: 0.5em 0.8em;
@@ -81,7 +80,7 @@ button {
 
 }
 
-button:hover {
+/* button:hover {
 	background-color: var(--clr2);
 	color: white;
 	transition: 0.3s;
@@ -90,14 +89,14 @@ button:hover {
 input:focus {
 	background-color: var(--clr1bg);
 	transition: background-color 1s;
-}
+} */
 
 
 /* Helpers */
 
 /* flex helpers */
 
-.flex {
+/* .flex {
 	display: flex;
 }
 
@@ -115,7 +114,7 @@ input:focus {
 
 .flex.align-center {
 	align-items: center;
-}
+} */
 
 /* text helpers */
 
@@ -125,15 +124,15 @@ input:focus {
 
 /* list helpers */
 
-.clean-list {
+/* .clean-list {
 	padding: 0;
 	margin: 0;
 	list-style-type: none;
-}
+} */
 
 /* font awsome */
 
-.fa {
+/* .fa {
 	font-family: fa;
 }
 
@@ -151,10 +150,10 @@ input:focus {
 
 .fa.fa-behance::before {
 	content: "\f1b4";
-}
+} */
 
 /* Layout */
-.main-layout {
+/* .main-layout {
 	display: grid;
 	grid-template-columns: 1.6rem 1fr 1.6rem;
 }
@@ -171,15 +170,15 @@ input:focus {
 	max-width: 800px;
 	padding: 1em;
 	margin: auto;
-}
+} */
 
 
 
 /* Components */
 
-.home {
+/* .home {
 	font-size: 1em;
-}
+} */
 
 /* .app-header {
 	background-color: var(--clr1);
@@ -187,7 +186,7 @@ input:focus {
 
 } */
 
-.header-container {
+/* .header-container {
 	display: flex;
 	align-items: center;
 
@@ -195,7 +194,7 @@ input:focus {
 
 .header-container h1 {
 	flex-grow: 1;
-}
+} */
 
 
 /* a.active {

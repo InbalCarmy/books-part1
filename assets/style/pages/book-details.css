@@ -1,0 +1,55 @@
+
+.book-details{
+    margin-left: 2rem;
+}
+
+.book-details h1{
+    font-size: 1.5rem ;
+}
+
+.book-details h2{
+    font-size: 1.2rem;
+}
+
+.book-details img{
+    display: block;
+    margin: 0 auto;
+}
+
+p{
+  	font-family: 'Edu VIC WA NT Beginner', cursive;
+}
+
+.book-details button{
+    margin-top: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: .5em 0 .5em;
+	font-family: 'Edu VIC WA NT Beginner', cursive;
+}
+
+.reading-level{
+    color: var(--clr1);
+    font-weight: bold;
+}
+
+.is-new{
+    color: var(--clr1);
+}
+
+.price-hight{
+    color: red;
+}
+
+.price-low{
+    color: green;
+}

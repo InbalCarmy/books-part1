@@ -17,3 +17,15 @@
     padding: 0.3rem;
     border-radius: 7px;
 }
+
+
+.book-list a{
+    text-decoration: none;
+    color: var(--clr1);
+}
+
+.book-list a.active{
+    color: var(--gray1);
+    text-decoration: underline;
+
+}
