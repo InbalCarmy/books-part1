@@ -46,6 +46,10 @@ export function BookDetails() {
         else return 'low'
     }
 
+    function onSale() {
+        return book.listPrice.isOnSale
+    }
+
 
     if(!book) return <div>Loading...</div>
      return (
@@ -59,6 +63,8 @@ export function BookDetails() {
             <p>Page Count: {book.pageCount}</p>
             <p className="reading-level">{readingLevel()} Reading</p>
             <p className={`price-${priceLevel()}`}>Price: {book.listPrice.amount} NIS</p>
+            {onSale() && 
+            <p>On Sale!</p>}
             <img src={book.thumbnail} alt={book.title} />
             <button onClick={onBack}>Back</button>
             
