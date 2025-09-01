@@ -1,7 +1,9 @@
 import { bookService } from "../services/book.service.js"
+import { LongTxt } from "../cmps/LongTxt.jsx"
+
 
 const {useState, useEffect} = React
-const {useParams, useNavigate} = ReactRouterDOM
+const {useParams, useNavigate, Link} = ReactRouterDOM
 
 export function BookDetails() {
 
@@ -50,6 +52,8 @@ export function BookDetails() {
         return book.listPrice.isOnSale
     }
 
+    // console.log('book prev id: ', book.prevbookId)
+
 
     if(!book) return <div>Loading...</div>
      return (
@@ -57,17 +61,22 @@ export function BookDetails() {
             <h1>{book.title}</h1>
             <h2>{book.subtitle}</h2>
             <h2>Authors: {book.authors}</h2>
-            <h4>Publish Date: {book.publishedDate}</h4>
-            <p className="is-new">{isNew()}</p>
-            <p>Description: {book.description}</p>
-            <p>Page Count: {book.pageCount}</p>
-            <p className="reading-level">{readingLevel()} Reading</p>
+            <h4>Publish Date: {book.publishedDate} - <span className="is-new">{isNew()}</span></h4>
+            {/* <p>Description: {book.description}</p> */}
+            <LongTxt txt={book.description} length={50} />
+            <p>Page Count: {book.pageCount}- <span className="reading-level">{readingLevel()} Reading</span></p>
+            {/* <p className="reading-level">{readingLevel()} Reading</p> */}
             <p className={`price-${priceLevel()}`}>Price: {book.listPrice.amount} NIS</p>
-            {onSale() && 
-            <p>On Sale!</p>}
-            <img src={book.thumbnail} alt={book.title} />
+            <div className="img-container">
+                <img src={book.thumbnail} alt={book.title} />
+                {onSale() && 
+                <div className="on-sale">On Sale!</div>}
+            </div>
             <button onClick={onBack}>Back</button>
-            
+            <section>
+                <button><Link to={`/book/${book.prevBookId}`}>Prev</Link></button>
+                <button><Link to={`/book/${book.nextBookId}`}>Next</Link></button>
+            </section>            
         </section>
      )
 }

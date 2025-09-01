@@ -4,21 +4,22 @@
     color: var(--clr1);
 }
 
-.app-header .header-container{
+.header-container{
     display: flex;
     align-items: center;
+    justify-content: space-between;
+
 }
 
 .app-header h1{
-    flex-grow: 1;
-    margin-left: 1rem;
+    margin-inline-start: 1rem;
 }
 
 .app-header .app-nav{
     display: flex;
     gap: 15px;
     font-family: 'Edu VIC WA NT Beginner', cursive;
-    margin-right: 1rem;
+    margin-inline-end: 1rem;
 }
 
 .app-header .app-nav a{
