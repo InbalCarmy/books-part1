@@ -1,9 +1,10 @@
 import { bookService } from "../services/book.service.js"
 import { LongTxt } from "../cmps/LongTxt.jsx"
+import { AddReview } from "../cmps/AddReview.jsx"
 
 
 const {useState, useEffect} = React
-const {useParams, useNavigate, Link} = ReactRouterDOM
+const {useParams, useNavigate, Link, Outlet} = ReactRouterDOM
 
 export function BookDetails() {
 
@@ -71,6 +72,11 @@ export function BookDetails() {
                 {onSale() && 
                 <div className="on-sale">On Sale!</div>}
             </div>
+            <nav>
+                <Link to={`/book/${book.id}/addReview`}>Add Review</Link>
+            </nav>
+            <Outlet />
+
             <button onClick={onBack}>Back</button>
             <section>
                 <button><Link to={`/book/${book.prevBookId}`}>Prev</Link></button>

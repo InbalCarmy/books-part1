@@ -2,4 +2,12 @@
 .book-index{
     flex-wrap: wrap;
     align-items: start;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+
 }
+
+.add-book-section {
+    text-align: center;
+    margin: 20px 0;
+}
+

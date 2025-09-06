@@ -1,6 +1,14 @@
 
 .book-details{
-    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-block-start: 20px; */
+    margin: 20px auto;
+    border-radius: 15px;
+    background: var(--clr1bg-light);
+    padding: 20px;
+    width: fit-content;
 }
 
 .book-details h1{

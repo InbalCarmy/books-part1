@@ -1,6 +1,7 @@
 import { loadFromStorage, makeId, saveToStorage } from './util.service.js'
 import { storageService } from './async-storage.service.js'
 
+
 const BOOK_KEY = 'bookDB'
 _createBooks()
 
@@ -63,7 +64,7 @@ function save(book) {
 
 function getEmptyBook() {
     return {
-        id: '',
+        // id: '',
         title: '',
         subtitle: '',
         authors: [],
@@ -101,7 +102,7 @@ function _createBooks() {
             description: utilService.makeLorem(20),
             pageCount: utilService.getRandomIntInclusive(20, 600),
             categories: [ctgs[utilService.getRandomIntInclusive(0, ctgs.length- 1)]],
-            thumbnail: `http://coding-academy.org/books-photos/${i+1}.jpg`,
+            thumbnail: `https://picsum.photos/150/200?random=${i+1}`,
             language: "en",
             listPrice: {
                 amount: utilService.getRandomIntInclusive(80, 500),
