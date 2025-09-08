@@ -15,7 +15,7 @@ export function BookDetails() {
 
     useEffect(() => {
         loadBook()
-    },[params.bookId])
+    },[params.bookId, location.pathname])
     
     // useEffect(() => {
     //     // Reload book when returning from add review
@@ -74,7 +74,8 @@ export function BookDetails() {
             <h2>{book.subtitle}</h2>
             <h2>Authors: {book.authors}</h2>
             <h4>Publish Date: {book.publishedDate} - <span className="is-new">{isNew()}</span></h4>
-            {book.description && <LongTxt txt={book.description} length={50} />}            <p>Page Count: {book.pageCount}- <span className="reading-level">{readingLevel()} Reading</span></p>
+            {book.description && <LongTxt txt={book.description} length={50} />}            
+            <p>Page Count: {book.pageCount}- <span className="reading-level">{readingLevel()} Reading</span></p>
             <p className={`price-${priceLevel()}`}>Price: {book.listPrice.amount} NIS</p>
             <div className="img-container">
                 <img src={book.thumbnail} alt={book.title} />
@@ -82,7 +83,7 @@ export function BookDetails() {
                 <div className="on-sale">On Sale!</div>}
             </div>
             <nav>
-                <Link to={`/book/${book.id}/addReview`}>Add Review</Link>
+               <button><Link to={`/book/${book.id}/addReview`}>Add Review</Link></button> 
             </nav>
             <Outlet />
             
