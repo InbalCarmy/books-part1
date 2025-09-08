@@ -17,12 +17,6 @@ export function BookDetails() {
     useEffect(() => {
         loadBook()
     },[params.bookId, location.pathname])
-    
-    // useEffect(() => {
-    //     // Reload book when returning from add review
-    //     loadBook()
-    // }, [location.pathname])
-
 
     function loadBook() {
         bookService.get(params.bookId)
@@ -61,9 +55,6 @@ export function BookDetails() {
     function onSale() {
         return book.listPrice.isOnSale
     }
-
-    // console.log('book prev id: ', book.prevbookId)
-
 
     if(!book) return <div>Loading...</div>
     

@@ -1,0 +1,55 @@
+
+
+.google-book-add{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    margin-top: 20px;
+}
+
+.google-book-add form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.google-book-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 600px;
+}
+
+.google-book-list li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    background-color: var(--clr1bg-light);
+    padding: 5px 30px;
+    /* margin-bottom: 10px; */
+    margin-block-end: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--gray2);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.google-book-list li:hover {
+    background-color: var(--gray1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.google-book-list button{
+    /* background-color: transparent; */
+    border-radius: 50%;
+    font-size: 1rem;
+}

@@ -9,5 +9,13 @@
 .add-book-section {
     text-align: center;
     margin: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.add-book-section a:hover{
+    text-decoration: underline;
+    color: var(--clr1);
+    transition: color 0.3s;
 }
 

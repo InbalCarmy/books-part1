@@ -51,6 +51,7 @@ export function BookIndex() {
             <BookFilter onSetFilterBy={onSetFilterBy} filterBy={filterBy}/>
             <section className="add-book-section">
                 <Link to="/book/edit">Add Book</Link>
+                <Link to="/book/bookAdd">Add Book From Google API</Link>
             </section>
             <BookList books = {books} onRemoveBook={onRemoveBook}/>
         </section>

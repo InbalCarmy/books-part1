@@ -6,12 +6,13 @@
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 10px;
     /* margin-top: 0; */
+    margin: 15px;
 }
 
 .book-list li{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     background-color: var(--clr1bg-light);
     padding: 0.3rem;
