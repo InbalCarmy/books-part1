@@ -1,0 +1,17 @@
+
+.long-txt{
+    /* display: flex;
+    flex-direction: column; */
+    gap: 5px;
+}
+
+.long-txt button{
+    justify-self: end;
+    background-color: transparent;
+    margin: 0;
+}
+
+.long-txt button:hover{
+    text-decoration: underline;
+    background-color: transparent;
+}

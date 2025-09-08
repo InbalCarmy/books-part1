@@ -20,7 +20,7 @@ export function LongTxt({ txt, length = 100} ) {
 
 
     return(
-        <div>
+        <div className="long-txt">
             <p>{displayTxt}</p>
             {isLong && (
                 <button onClick={()=> setIsExpanded(!isExpanded)}>{isReadMore()}</button>

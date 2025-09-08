@@ -4,17 +4,23 @@ import { AddReview } from "../cmps/AddReview.jsx"
 
 
 const {useState, useEffect} = React
-const {useParams, useNavigate, Link, Outlet} = ReactRouterDOM
+const {useParams, useNavigate, Link, Outlet, useLocation} = ReactRouterDOM
 
 export function BookDetails() {
 
     const [book, setBook] = useState(null)
     const params = useParams()
     const navigate = useNavigate()
+    const location = useLocation()
 
     useEffect(() => {
         loadBook()
     },[params.bookId])
+    
+    // useEffect(() => {
+    //     // Reload book when returning from add review
+    //     loadBook()
+    // }, [location.pathname])
 
 
     function loadBook() {
@@ -59,6 +65,9 @@ export function BookDetails() {
 
 
     if(!book) return <div>Loading...</div>
+    
+    console.log('book.reviews:', book.reviews)
+    
      return (
         <section className="book-details">
             <h1>{book.title}</h1>
@@ -76,6 +85,18 @@ export function BookDetails() {
                 <Link to={`/book/${book.id}/addReview`}>Add Review</Link>
             </nav>
             <Outlet />
+            
+            {book.reviews && book.reviews.length > 0 && (
+                <section className="reviews">
+                    <h3>Reviews:</h3>
+                    {book.reviews.map((review, idx) => (
+                        <div key={idx} className="review">
+                            <p><strong>{review.fullname}</strong> - Rating: {review.rate}/5</p>
+                            <p>Read on: {review.readAt}</p>
+                        </div>
+                    ))}
+                </section>
+            )}
 
             <button onClick={onBack}>Back</button>
             <section>

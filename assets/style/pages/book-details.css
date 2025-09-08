@@ -8,7 +8,9 @@
     border-radius: 15px;
     background: var(--clr1bg-light);
     padding: 20px;
-    width: fit-content;
+    width: 80vw;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    gap: 10px;
 }
 
 .book-details h1{

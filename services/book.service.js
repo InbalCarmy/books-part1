@@ -12,6 +12,8 @@ export const bookService = {
     save,
     getEmptyBook,
     getDefaultFilter,
+    addReview,
+    getEmptyReview
 }
 
 // For Debug (easy access from console):
@@ -116,4 +118,23 @@ function _createBooks() {
     console.log('books', books)
     saveToStorage(BOOK_KEY, books)
 
+}
+
+function getEmptyReview() {
+    return{
+        fullname: '',
+        rate: 0,
+        readAt: ''
+    }
+}
+
+function addReview(bookId, review) {
+    return get(bookId)
+        .then(book => {
+            if(!book.reviews) {
+                book.reviews = []
+            }
+            book.reviews.push(review)
+            return save(book)
+        })
 }

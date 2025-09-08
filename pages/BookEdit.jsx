@@ -10,10 +10,10 @@ export function BookEdit() {
     const { bookId } = useParams()
 
     useEffect(()=> {
-        if(bookId) loadBooks()
+        if(bookId) loadBook()
     }, [])
 
-    function loadBooks() {
+    function loadBook() {
         bookService.get(bookId)
             .then(setBook)
             .catch(err=> {

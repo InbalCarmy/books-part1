@@ -1,0 +1,17 @@
+
+
+.add-review{
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: var(--gray2);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.add-review form{
+    display: flex;
+    flex-direction: column;
+}
