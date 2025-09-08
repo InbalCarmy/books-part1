@@ -1,6 +1,7 @@
 import { bookService } from "../services/book.service.js"
 import { LongTxt } from "../cmps/LongTxt.jsx"
 import { AddReview } from "../cmps/AddReview.jsx"
+import { ReviewList } from "../cmps/ReviewList.jsx"
 
 
 const {useState, useEffect} = React
@@ -88,15 +89,7 @@ export function BookDetails() {
             <Outlet />
             
             {book.reviews && book.reviews.length > 0 && (
-                <section className="reviews">
-                    <h3>Reviews:</h3>
-                    {book.reviews.map((review, idx) => (
-                        <div key={idx} className="review">
-                            <p><strong>{review.fullname}</strong> - Rating: {review.rate}/5</p>
-                            <p>Read on: {review.readAt}</p>
-                        </div>
-                    ))}
-                </section>
+                <ReviewList reviews={book.reviews} maxReviews ={1} />
             )}
 
             <button onClick={onBack}>Back</button>
