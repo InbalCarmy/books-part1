@@ -39,7 +39,7 @@ export function BookIndex() {
         })
         .catch(err => {
             console.log('Problems removing book: ', err)
-            showErrorMsg('Problem removing car')
+            showErrorMsg('Problem removing book')
         })
     }
 
