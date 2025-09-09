@@ -10,14 +10,7 @@ export function GoogleBookAdd(){
 
     const [books, setBooks] = useState([])
     const [searchText, setSearchText] = useState('')
-    const onSetFilterDebounce = useRef(debounce((text) => {
-        googleBookService.query(text)
-            .then(setBooks)
-            .catch(err => {
-                console.error('Search error:', err)
-                showErrorMsg('Failed to search books')
-            })
-    }, 1000)).current
+    const onSetFilterDebounce = useRef(debounce(searchBooksFromGoogle, 1000)).current
 
 
     useEffect(()=> {
@@ -27,6 +20,15 @@ export function GoogleBookAdd(){
             setBooks([])
         }
     },[searchText])
+
+    function searchBooksFromGoogle(text){
+        googleBookService.query(text)
+            .then(setBooks)
+            .catch(err => {
+                console.error('Search error:', err)
+                showErrorMsg('Failed to search books')
+            })
+    }
 
 
     function handleAdd(book){    

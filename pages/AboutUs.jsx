@@ -12,8 +12,8 @@ export function AboutUs() {
                 length={300}
             />
             <nav>
-                <Link to='/about/Team'>About the Team</Link>
-                <Link to='/about/Goal'>About the Goal</Link>
+                <Link to='/about/team'>About the Team</Link>
+                <Link to='/about/goal'>About the Goal</Link>
             </nav>
             <Outlet/>
 
