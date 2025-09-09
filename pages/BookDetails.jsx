@@ -19,6 +19,7 @@ export function BookDetails() {
     },[params.bookId, location.pathname])
 
     function loadBook() {
+        //show loader
         bookService.get(params.bookId)
         .then(book => setBook(book))
         .catch(err => console.log('err: ', err))

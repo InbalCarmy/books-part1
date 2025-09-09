@@ -14,7 +14,6 @@ export const bookService = {
     getDefaultFilter,
     addReview,
     getEmptyReview,
-    addGoogleBook,
     getFilterFromSrcParams
 }
 
@@ -147,24 +146,4 @@ function addReview(bookId, review) {
             book.reviews.push(review)
             return save(book)
         })
-}
-
-function addGoogleBook(book) {
-    const fullBook = {
-        title: book.title,
-        subtitle: '',
-        authors: book.authors,
-        publishedDate: book.publishedDate,
-        description: book.description,
-        pageCount: book.pageCount,
-        categories: book.categories,
-        thumbnail: book.thumbnail,
-        language: 'en',
-        listPrice: {
-            amount: 100,
-            currencyCode: 'EUR',
-            isOnSale: false
-        }
-    }
-    return save(fullBook) 
 }
