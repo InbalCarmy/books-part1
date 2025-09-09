@@ -10,6 +10,8 @@ import { BookEdit } from "./pages/BookEdit.jsx"
 import { AddReview } from "./cmps/AddReview.jsx"
 import { UserMsg } from "./cmps/UserMsg.jsx"
 import { GoogleBookAdd } from "./cmps/GoogleBookAdd.jsx"
+import { AboutTeam } from "./cmps/AboutTeam.jsx"
+import { AboutGoal } from "./cmps/AboutGoal.jsx"
 
 
 
@@ -27,7 +29,10 @@ export function RootCmp() {
                     <Routes>
                         <Route path="/" element={<Navigate to="/home"/>}/>
                         <Route path="/home" element={<HomePage/>}/>
-                        <Route path="/about" element={<AboutUs/>}/>
+                        <Route path="/about" element={<AboutUs/>}>
+                            <Route path="/about/Team" element={<AboutTeam />} />
+                            <Route path="/about/Goal" element={<AboutGoal />} />
+                        </Route>
                         <Route path="/book" element={<BookIndex/>}/>
                         <Route path="/book/:bookId" element={<BookDetails />}>
                             <Route path="addReview" element={<AddReview />}/>

@@ -15,3 +15,14 @@
 .book-preview img {
     max-width: 100px;
 }
+
+.img-book-preview{
+    position: relative;
+    display: inline-block;
+}
+
+.img-book-preview .on-sale{
+    font-size: 0.8rem;
+    top: 5px;
+    right: 5px;
+}

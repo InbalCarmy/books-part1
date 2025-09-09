@@ -14,7 +14,8 @@ export const bookService = {
     getDefaultFilter,
     addReview,
     getEmptyReview,
-    addGoogleBook
+    addGoogleBook,
+    getFilterFromSrcParams
 }
 
 // For Debug (easy access from console):
@@ -89,6 +90,14 @@ function getDefaultFilter(filterBy = { title: '', price: 0 }) {
     return { title: filterBy.title, price: filterBy.price }
 }
 
+function getFilterFromSrcParams(srcParams) {
+    const title = srcParams.get('title') || ''
+    const price = srcParams.get('price') || ''
+    return {
+        title, 
+        price
+    }
+}
 
 function _createBooks() {
     const ctgs= ['Love', 'Fiction', 'Poetry', 'Computers', 'Religion']

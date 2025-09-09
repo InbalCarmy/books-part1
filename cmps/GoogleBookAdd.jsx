@@ -29,15 +29,15 @@ export function GoogleBookAdd(){
         }
     },[searchText])
 
-    function handleSearch(ev) {
-        ev.preventDefault()
-        googleBookService.query(searchText)
-            .then(setBooks)
-            .catch(err => {
-                console.error('Search error:', err)
-                showErrorMsg('Failed to search books')
-            })
-    }
+    // function handleSearch(ev) {
+    //     ev.preventDefault()
+    //     googleBookService.query(searchText)
+    //         .then(setBooks)
+    //         .catch(err => {
+    //             console.error('Search error:', err)
+    //             showErrorMsg('Failed to search books')
+    //         })
+    // }
 
     function handleAdd(book){        
         bookService.addGoogleBook(book)
@@ -51,7 +51,9 @@ export function GoogleBookAdd(){
 
     return(
         <section className="google-book-add">
-            <form onSubmit={handleSearch}>
+            <form 
+            // onSubmit={handleSearch}
+            >
                 <label htmlFor="searchBook">Search Book:</label>
                 <input 
                     type="search" 

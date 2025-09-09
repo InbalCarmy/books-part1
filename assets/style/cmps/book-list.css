@@ -17,6 +17,8 @@
     background-color: var(--clr1bg-light);
     padding: 0.3rem;
     border-radius: 7px;
+        position: relative;
+
 }
 
 
@@ -29,4 +31,15 @@
     color: var(--gray1);
     text-decoration: underline;
 
+}
+
+.book-list .remove-btn{
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8d7da;
+    color: #721c24;
 }

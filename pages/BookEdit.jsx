@@ -89,10 +89,10 @@ export function BookEdit() {
                 <input onChange={handleChange} value={description} type="text" name="description" id="description" />
 
                 <label htmlFor="pageCount">Page Count</label>
-                <input onChange={handleChange} value={pageCount } type="number" name="pageCount" id="pageCount" />
+                <input onChange={handleChange} value={pageCount || ''} type="number" name="pageCount" id="pageCount" />
 
                 <label htmlFor="price">Price</label>
-                <input onChange={handleChangeListPrice} value={listPrice.amount} type="number" name="amount" id="price" />
+                <input onChange={handleChangeListPrice} value={listPrice.amount || ''} type="number" name="amount" id="price" />
 
                 <label htmlFor="isOnSale">On Sale</label>
                 <input onChange={handleChangeListPrice} checked={listPrice.isOnSale} id="isOnSale" type="checkbox" name="isOnSale" />

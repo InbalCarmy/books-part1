@@ -1,3 +1,4 @@
+
 function createEventEmitter() {
     const listenersMap = {}
     return {
