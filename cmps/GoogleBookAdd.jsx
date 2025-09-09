@@ -19,7 +19,6 @@ export function GoogleBookAdd(){
             })
     }, 1000)).current
 
-    
 
     useEffect(()=> {
         if (searchText) {
@@ -29,18 +28,12 @@ export function GoogleBookAdd(){
         }
     },[searchText])
 
-    // function handleSearch(ev) {
-    //     ev.preventDefault()
-    //     googleBookService.query(searchText)
-    //         .then(setBooks)
-    //         .catch(err => {
-    //             console.error('Search error:', err)
-    //             showErrorMsg('Failed to search books')
-    //         })
-    // }
 
-    function handleAdd(book){        
-        bookService.addGoogleBook(book)
+    function handleAdd(book){    
+        delete book.id 
+        let bookToSave = bookService.getEmptyBook() 
+        bookToSave = {...bookToSave, ...book}  
+        bookService.save(bookToSave)
         .then(() => showSuccessMsg('book added successfully!'))
         .catch((err) =>{
             console.log('error adding google book: ', err)
@@ -51,9 +44,7 @@ export function GoogleBookAdd(){
 
     return(
         <section className="google-book-add">
-            <form 
-            // onSubmit={handleSearch}
-            >
+            <form>
                 <label htmlFor="searchBook">Search Book:</label>
                 <input 
                     type="search" 
@@ -61,7 +52,6 @@ export function GoogleBookAdd(){
                     value={searchText}
                     onChange={(e) => setSearchText(e.target.value)}
                 />
-                {/* <button type="submit">Search</button> */}
             </form>
 
             <ul className="google-book-list">
