@@ -38,7 +38,7 @@ export function AddReview(){
 
     function onSaveReview(ev) {
         ev.preventDefault()
-        console.log('Saving review:', review, 'for bookId:', bookId)
+        // console.log('Saving review :', review, 'for bookId:', bookId)
         bookService.addReview(bookId, review)
         .then((savedBook) => {
             console.log('Review saved, book:', savedBook)

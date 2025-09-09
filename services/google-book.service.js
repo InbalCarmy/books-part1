@@ -10,15 +10,12 @@ export const googleBookService ={
 function query(searchText = '') {
     if (!searchText) return Promise.resolve([])
     
-    // Check cache first
     const cachedResult = _getCachedResult(searchText)
     if (cachedResult) {
         return Promise.resolve(cachedResult)
     }
     
-    // const API_KEY = 'https://www.googleapis.com/books/v1/volumes?printType=books&q=effective%20javascript'
-    const url = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(searchText)}&maxResults=5`
-    
+    const url = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(searchText)}&maxResults=5`  
     return fetch(url)
         .then(res => res.json())
         .then(data => {
@@ -27,6 +24,7 @@ function query(searchText = '') {
             const books = data.items.map(item => ({
                 id: item.id,
                 title: item.volumeInfo.title || 'Unknown Title',
+                subtitle: item.volumeInfo.subtitle || '',
                 authors: item.volumeInfo.authors || ['Unknown Author'],
                 publishedDate: item.volumeInfo.publishedDate || '',
                 description: item.volumeInfo.description || 'No description available',

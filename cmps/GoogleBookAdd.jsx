@@ -61,7 +61,7 @@ export function GoogleBookAdd(){
                     value={searchText}
                     onChange={(e) => setSearchText(e.target.value)}
                 />
-                <button type="submit">Search</button>
+                {/* <button type="submit">Search</button> */}
             </form>
 
             <ul className="google-book-list">
