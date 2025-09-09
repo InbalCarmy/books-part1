@@ -48,7 +48,7 @@ export function BookIndex() {
     }
 
 
-    if (!books) return <div>Loading...</div>
+    if(!books) return <div className="loading">Loading...</div>    
      return (
         <section className="book-index">
             <BookFilter onSetFilterBy={onSetFilterBy} filterBy={filterBy}/>

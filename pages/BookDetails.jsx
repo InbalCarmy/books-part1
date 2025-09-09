@@ -57,10 +57,7 @@ export function BookDetails() {
         return book.listPrice.isOnSale
     }
 
-    if(!book) return <div>Loading...</div>
-    
-    console.log('book.reviews:', book.reviews)
-    
+    if(!book) return <div className="loading">Loading...</div>    
      return (
         <section className="book-details">
             <h1>{book.title}</h1>

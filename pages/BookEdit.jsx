@@ -74,6 +74,8 @@ export function BookEdit() {
         pageCount
     } = book
 
+
+    if(!book) return <div className="loading">Loading</div>
     return (
         <section className="book-edit">
             <h1>{bookId ? 'Edit' : 'Add'}</h1>
