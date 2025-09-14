@@ -132,7 +132,7 @@ function _createBooks() {
 function getEmptyReview() {
     return{
         fullname: '',
-        rate: 0,
+        rate: '',
         readAt: ''
     }
 }

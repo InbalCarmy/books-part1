@@ -16,7 +16,8 @@ export function ReviewList({ reviews, maxReviews = 2}) {
             <h3>Reviews:</h3>
             {displayedReviews.map((review, idx) => (
                 <div key={idx} className="review">
-                    <p><strong>{review.fullname}</strong> - Rating: {review.rate}/5</p>
+                    <p><strong>{review.fullname}</strong></p>
+                    <p>Rating: {review.rate}</p>
                     <p>Read on: {review.readAt}</p>
                 </div>
             ))}

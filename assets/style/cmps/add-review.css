@@ -15,4 +15,36 @@
 .add-review form{
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
+
+.star{
+    cursor: pointer;
+    color: blanchedalmond;
+    padding: 2px ;
+}
+
+.star.filled{
+    color:gold;
+    border-width: 2px;
+}
+
+select{
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+}
+
+.rate-by-text,
+.rate-by-select{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rate-by-stars{
+    gap: 10px;
+}
+
+  .add-review input[type="text"],
+  .add-review input[type="date"] {
+      font-family: inherit;
+  }
