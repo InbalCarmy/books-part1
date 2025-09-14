@@ -1,7 +1,5 @@
 
 .long-txt{
-    /* display: flex;
-    flex-direction: column; */
     gap: 5px;
 }
 
@@ -14,4 +12,5 @@
 .long-txt button:hover{
     text-decoration: underline;
     background-color: transparent;
+    color: black;
 }
