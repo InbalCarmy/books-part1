@@ -12,6 +12,7 @@ import { UserMsg } from "./cmps/UserMsg.jsx"
 import { GoogleBookAdd } from "./cmps/GoogleBookAdd.jsx"
 import { AboutTeam } from "./cmps/AboutTeam.jsx"
 import { AboutGoal } from "./cmps/AboutGoal.jsx"
+import { Dashboard } from "./pages/Dashboard.jsx"
 
 
 
@@ -40,6 +41,7 @@ export function RootCmp() {
                         <Route path="/book/edit" element={<BookEdit />}/>
                         <Route path="/book/bookAdd" element={<GoogleBookAdd />}/>
                         <Route path="/book/edit/:bookId" element={<BookEdit />}/>                    
+                        <Route path="/dashboard" element={<Dashboard />}/>                    
                         <Route path="*" element={<NotFound />} />
 
                     </Routes>

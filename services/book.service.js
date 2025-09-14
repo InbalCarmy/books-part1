@@ -14,7 +14,8 @@ export const bookService = {
     getDefaultFilter,
     addReview,
     getEmptyReview,
-    getFilterFromSrcParams
+    getFilterFromSrcParams, 
+    getCatStatus
 }
 
 // For Debug (easy access from console):
@@ -146,4 +147,29 @@ function addReview(bookId, review) {
             book.reviews.push(review)
             return save(book)
         })
+}
+
+function _getBookCountByCatMap(books) {
+    const bookCountByCatMap = books.reduce((map, book) => {
+        if (!map[book.categories]) map[book.categories] = 0
+        map[book.categories]++
+        return map
+    }, {})
+    return bookCountByCatMap
+}
+
+function getCatStatus() {
+    return storageService.query(BOOK_KEY)
+    .then(books => {
+        const bookCountByCatMap = _getBookCountByCatMap(books)
+        const totalBooks = books.length
+        const data = Object.keys(bookCountByCatMap)
+        .map(cat => 
+        ({
+            title: cat,
+            value: Math.round((bookCountByCatMap[cat] / totalBooks) * 100)
+        })
+        )
+        return data
+    })
 }

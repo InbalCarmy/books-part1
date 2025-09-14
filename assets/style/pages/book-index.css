@@ -13,9 +13,16 @@
     justify-content: space-evenly;
 }
 
-.add-book-section a:hover{
+.add-book-section a:hover,
+.dashboard-nav a:hover{
     text-decoration: underline;
     color: var(--clr1);
     transition: color 0.3s;
 }
+.dashboard-nav{
+    display: flex;
+    justify-content: center;
+}
+
+
 
